@@ -45,6 +45,8 @@ Visit: `http://localhost:5173`
 
 The frontend makes requests to `http://localhost:8080/api/weather`.
 
+<img width="1308" height="804" alt="image" src="https://github.com/user-attachments/assets/ce504419-1529-4685-b8d4-584d140df9af" />
+
 
 
 
