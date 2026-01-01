@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.app h1 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search input {
+  padding: 12px 16px;
+  width: 250px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.search button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.search button:active {
+  transform: translateY(0);
+}
+
+.card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
+}
+
+.card p {
+  margin: 12px 0;
+  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.1rem);
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app {
+    padding: 28px;
+  }
+
+  .search {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    width: 92%;
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .search button {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+.card small {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 600;
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 8px;
+}
