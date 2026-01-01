@@ -47,18 +47,5 @@ The frontend makes requests to `http://localhost:8080/api/weather`.
 
 
 
-## Project Structure
-```
-weather_app/
-├─ backend/               # Spring Boot API
-│  ├─ src/main/java/...   # Controllers, services, cache, models
-│  ├─ src/main/resources/ # application.properties
-│  └─ pom.xml             # Maven (wrapper included)
-└─ frontend/              # React + Vite UI
-   ├─ src/                # App.jsx, styles
-   ├─ package.json        # scripts (dev/build/preview)
-   └─ vite.config.js
-```
-
 
 
