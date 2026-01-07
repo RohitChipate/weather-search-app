@@ -1,52 +1,17 @@
 # Weather App (React + Vite + Spring Boot)
+A simple full-stack weather search app. The React frontend calls a Spring Boot API that fetches current weather from OpenWeather and caches results for 10 minutes. 
 
-A simple full‑stack weather search app. The React frontend calls a Spring Boot API that fetches current weather from OpenWeather and caches results for 10 minutes.
-
-## Tech Stack
-- Frontend: React 19 + Vite
-- Backend: Spring Boot 3 (Java 17, Maven wrapper)
-- External API: OpenWeather (metric units)
-
-## Prerequisites
-- Node.js 18+ and npm
-- Java 17+
-- Maven is not required (project uses the Maven wrapper: `mvnw`/`mvnw.cmd`)
-
-## Quick Start
-
-### 1) Start the Backend (port 8080)
-From the repository root:
-
-cd backend
-mvnw.cmd spring-boot:run
-```
-```
-
-- API base URL: `http://localhost:8080`
-- Endpoint: `GET /api/weather?city=<CITY_NAME>`
-
-Test the API:
-```bash
-curl "http://localhost:8080/api/weather?city=Pune"
-```
-
-Configuration:
-- OpenWeather key and base URL are configured in `backend/src/main/resources/application.properties`:
-  - `weather.api.key` (replace with your own API key)
-  - `weather.api.url`
-
-### 2) Start the Frontend (Vite, port 5173)
-
-cd frontend
-npm install
-npm run dev
-```
-Visit: `http://localhost:5173`
-
-The frontend makes requests to `http://localhost:8080/api/weather`.
-
-
-
-
-
-
+## Running the App
+1. Clone the repo
+2. Get an API key from [OpenWeather](https://openweathermap.org/api)
+3. Add the API key to `backend/src/main/resources/application.properties`
+4. Run `cd weather-app`
+5. Run `cd backend`
+6. Run `mvn clean install`
+7. Run `java -jar target/backend-0.0.1-SNAPSHOT.jar`
+8. The backend runs on localhost:8080
+9. Run `cd ../frontend`
+10. Run `npm install`
+11. Run `npm run dev`
+12. Open [http://localhost:3000](http://localhost:3000) in your browser
+13. The frontend runs on localhost:3000
